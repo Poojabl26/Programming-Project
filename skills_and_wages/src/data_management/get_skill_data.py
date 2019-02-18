@@ -62,3 +62,6 @@ file['neuroticism'] = preprocessing.scale((file.iloc[:, [25, 16, 11]].sum(axis=1
 # Generating Variable for Years of Experience of an individual
 file['experience'] = file['age'] - file['schooling_years'] - 6
 file['experience_squared'] = file['experience'] ** 2
+
+# Generating log wages
+file['log_wages'] = np.log((file['wages'] / (file['weekly_hours'] * (4.3))))
