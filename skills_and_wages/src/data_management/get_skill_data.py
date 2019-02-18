@@ -71,3 +71,9 @@ file = file.replace({'occupation': {2: 1, 9: 8}})  # 1 Higher managers
 file = file.replace({'occupation': {3: 2, 8: 6}})  # 2 Lower managers
 file = file.replace({'occupation': {5: 3, 4: 3}})  # 3 Routine workers
 file = file.replace({'occupation': {6: 4}})  # 4 Manual Workers
+
+# Keeping the relevant variables in the final dataset
+file = file.loc[:,
+       ['persnr', 'openness', 'conscientiousness', 'extraversion', 'agreeableness', 'schooling_years', 'fluency',
+        'symbol',
+        'neuroticism', 'experience', 'experience_squared', 'log_wages', 'occupation']]
