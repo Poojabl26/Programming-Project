@@ -77,3 +77,6 @@ file = file.loc[:,
        ['persnr', 'openness', 'conscientiousness', 'extraversion', 'agreeableness', 'schooling_years', 'fluency',
         'symbol',
         'neuroticism', 'experience', 'experience_squared', 'log_wages', 'occupation']]
+
+# Saving the final dataset used for analysis
+file.to_csv(ppj("OUT_DATA", "data.csv"))
