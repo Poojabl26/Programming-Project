@@ -22,3 +22,8 @@ file = file.loc[:,
        ['persnr', 'vp62', 'vbilzeit', 'egp88_05', 'f96t90g', 'f99z90r', 'vp12501', 'vp12502', 'vp12503', 'vp12504',
         'vp12505', 'vp12506', 'vp12507', 'vp12508', 'vp12509', 'vp12510', 'vp12511', 'vp12512', 'vp12513',
         'vp12514', 'vp12515', 'd1110905', 'd1110105', 'ijob105']]
+
+# Converting the Categorical type variables to Numeric type
+cat_columns = file.select_dtypes(['category']).columns
+file[cat_columns] = file[cat_columns].apply(lambda x: x.cat.codes)
+file[cat_columns] = file[cat_columns].astype('int64')
