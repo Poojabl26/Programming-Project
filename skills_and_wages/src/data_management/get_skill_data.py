@@ -41,3 +41,7 @@ file = file.replace([-2, -1, 0], np.nan)
 file = file.dropna()
 # file = file.reset_index(drop=True)
 print(file.isnull().sum())
+
+# Standardising test scores for Cognitive Abilities
+file['fluency'] = preprocessing.scale(file['f96t90g'])
+file['symbol'] = preprocessing.scale(file['f99z90r'])
