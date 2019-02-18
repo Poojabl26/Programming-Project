@@ -45,3 +45,9 @@ print(file.isnull().sum())
 # Standardising test scores for Cognitive Abilities
 file['fluency'] = preprocessing.scale(file['f96t90g'])
 file['symbol'] = preprocessing.scale(file['f99z90r'])
+
+# Reversing the scale for personality items
+file['revvp12507'] = 8 - file['vp12507']
+file['revvp12512'] = 8 - file['vp12512']
+file['revvp12503'] = 8 - file['vp12503']
+file['revvp12515'] = 8 - file['vp12515']
