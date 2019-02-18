@@ -72,6 +72,9 @@ file = file.replace({'occupation': {3: 2, 8: 6}})  # 2 Lower managers
 file = file.replace({'occupation': {5: 3, 4: 3}})  # 3 Routine workers
 file = file.replace({'occupation': {6: 4}})  # 4 Manual Workers
 
+
+print(len(file))
+
 # Keeping the relevant variables in the final dataset
 file = file.loc[:,
        ['persnr', 'openness', 'conscientiousness', 'extraversion', 'agreeableness', 'schooling_years', 'fluency',
@@ -80,3 +83,8 @@ file = file.loc[:,
 
 # Saving the final dataset used for analysis
 file.to_csv(ppj("OUT_DATA", "data.csv"))
+
+# Program ends here
+end_time = datetime.now()
+print('Execution duration: {}'.format(end_time - start_time))
+
