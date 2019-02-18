@@ -32,3 +32,12 @@ file[cat_columns] = file[cat_columns].astype('int64')
 file.rename(
     columns={"vp62": "weekly_hours", "ijob105": "wages", "d1110905": "schooling_years", "egp88_05": "occupation",
              "d1110105": "age", }, inplace=True)
+
+# Cleaning Data
+file = file.loc[(file['age'] > 20) & (file['age'] <= 60)]
+Occ_good = [2, 3, 4, 5, 8, 9]
+file = file[file['occupation'].isin(Occ_good)]
+file = file.replace([-2, -1, 0], np.nan)
+file = file.dropna()
+# file = file.reset_index(drop=True)
+print(file.isnull().sum())
