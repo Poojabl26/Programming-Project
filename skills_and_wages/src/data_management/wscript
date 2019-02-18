@@ -7,6 +7,6 @@ def build(ctx):
     ctx(
         features='run_py_script',
         source='get_skill_data.py',
-        target=ctx.path_to(ctx, 'OUT_DATA', 'simulation.csv'),
+        target=ctx.path_to(ctx, 'OUT_DATA', 'data.csv'),
         name='get_skill_data'
     )
