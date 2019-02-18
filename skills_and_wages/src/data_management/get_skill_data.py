@@ -27,3 +27,8 @@ file = file.loc[:,
 cat_columns = file.select_dtypes(['category']).columns
 file[cat_columns] = file[cat_columns].apply(lambda x: x.cat.codes)
 file[cat_columns] = file[cat_columns].astype('int64')
+
+# Renaming Relevant Variables
+file.rename(
+    columns={"vp62": "weekly_hours", "ijob105": "wages", "d1110905": "schooling_years", "egp88_05": "occupation",
+             "d1110105": "age", }, inplace=True)
