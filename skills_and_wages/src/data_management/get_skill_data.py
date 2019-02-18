@@ -65,3 +65,9 @@ file['experience_squared'] = file['experience'] ** 2
 
 # Generating log wages
 file['log_wages'] = np.log((file['wages'] / (file['weekly_hours'] * (4.3))))
+
+# Merging and renaming similar occupation categories
+file = file.replace({'occupation': {2: 1, 9: 8}})  # 1 Higher managers
+file = file.replace({'occupation': {3: 2, 8: 6}})  # 2 Lower managers
+file = file.replace({'occupation': {5: 3, 4: 3}})  # 3 Routine workers
+file = file.replace({'occupation': {6: 4}})  # 4 Manual Workers
