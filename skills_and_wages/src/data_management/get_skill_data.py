@@ -57,4 +57,8 @@ file['openness'] = preprocessing.scale((file.iloc[:, [10, 15, 20]].sum(axis=1)) 
 file['conscientiousness'] = preprocessing.scale((file.iloc[:, [7, 22, 17]].sum(axis=1)) / 3)
 file['extraversion'] = preprocessing.scale((file.iloc[:, [8, 14, 23]].sum(axis=1)) / 3)
 file['agreeableness'] = preprocessing.scale((file.iloc[:, [24, 12, 19]].sum(axis=1)) / 3)
-file['neuroticism'] = preprocessing.scale((file.iloc[:, [25, 16, 11]].sum(axis=1)) / 3)
+file['neuroticism'] = preprocessing.scale((file.iloc[:, [25, 16, 11]].sum(axis=1)) / 3
+
+# Generating Variable for Years of Experience of an individual
+file['experience'] = file['age'] - file['schooling_years'] - 6
+file['experience_squared'] = file['experience'] ** 2
