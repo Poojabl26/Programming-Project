@@ -10,4 +10,3 @@ def build(ctx):
         target=ctx.path_to(ctx, 'OUT_DATA', 'simulation.csv'),
         name='get_skill_data'
     )
-Git 
