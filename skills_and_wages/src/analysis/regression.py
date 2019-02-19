@@ -36,3 +36,12 @@ model = sm.OLS(y, X).fit()
 predictions_noncog = model.predict(X)
 # print(model.summary())
 
+# Basic Mincer plus both
+
+X = file[['constant', 'schooling_years', 'experience', 'experience_squared', 'fluency', 'symbol', 'openness',
+          'conscientiousness', 'extraversion'
+    , 'agreeableness', 'neuroticism']]
+y = file['log_wages']
+model = sm.OLS(y, X).fit()
+predictions_all = model.predict(X)
+# print(model.summary())
