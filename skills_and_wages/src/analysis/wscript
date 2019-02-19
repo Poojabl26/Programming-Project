@@ -1,23 +1,21 @@
-#! python
+#! pythongit st
 
 
 def build(ctx):
 
-    for model in 'baseline', 'max_moves_2':
-
         # Illustrate use of run_py_script with automatic model specification.
         ctx(
             features='run_py_script',
-            source='schelling.py',
-            deps=[
-                ctx.path_to(ctx, 'OUT_DATA', 'initial_locations.csv'),
-                ctx.path_to(ctx, 'IN_MODEL_CODE', 'agent.py'),
-                ctx.path_to(ctx, 'IN_MODEL_SPECS', '{}.json'.format(model)),
-            ],
+            source='regression.py',
+            deps= ctx.path_to(ctx, 'OUT_DATA', 'data.csv')
+            ,
             target=[
-                ctx.path_to(ctx, 'OUT_ANALYSIS', 'schelling_{}.pickle'.format(model)),
-                ctx.path_to(ctx, 'OUT_ANALYSIS', 'log', 'schelling_{}.log'.format(model))
-            ],
-            append=model,
-            name='schelling_{}'.format(model)
+                ctx.path_to(ctx, 'OUT_ANALYSIS', 'basic.pickle'),
+                ctx.path_to(ctx, 'OUT_ANALYSIS', 'cognitive.pickle'),
+		ctx.path_to(ctx, 'OUT_ANALYSIS', 'non_cognitive.pickle'),
+		 ctx.path_to(ctx, 'OUT_ANALYSIS', 'both.pickle'),
+		 ctx.path_to(ctx, 'OUT_ANALYSIS', 'Occupational_results.pickle')
+            ]
         )
+
+
