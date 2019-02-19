@@ -45,3 +45,17 @@ y = file['log_wages']
 model = sm.OLS(y, X).fit()
 predictions_all = model.predict(X)
 # print(model.summary())
+
+# Regression for Occupation Groups
+
+print('Regression results for different Occupational groups (1,2,3,4)')
+
+for groups in file.occupation.unique():
+    tempfile = file[file.occupation == groups]
+    X = tempfile[['constant', 'schooling_years', 'experience', 'experience_squared', 'fluency', 'symbol', 'openness',
+                  'conscientiousness', 'extraversion'
+        , 'agreeableness', 'neuroticism']]
+    y = tempfile['log_wages']
+
+    model = sm.OLS(y, X).fit()
+    # print(model.summary())
