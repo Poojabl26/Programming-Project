@@ -1,6 +1,7 @@
 import statsmodels.api as sm
 import pandas as pd
 from bld.project_paths import project_paths_join as ppj
+import pickle
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
@@ -19,14 +20,20 @@ X = file[['constant', 'schooling_years', 'experience', 'experience_squared']]
 y = file['log_wages']
 model_1 = sm.OLS(y, X).fit()
 predictions_mincer = model_1.predict(X)
-print(model_!.summary())
+basic = model_1.summary()
+
+with open(ppj("OUT_ANALYSIS", "basic.pickle"), "wb") as out_file:
+    pickle.dump(basic, out_file)
 
 # Basic Mincer plus Cognitive
 X = file[['constant', 'schooling_years', 'experience', 'experience_squared', 'fluency', 'symbol']]
 y = file['log_wages']
 model_2 = sm.OLS(y, X).fit()
 predictions_cog = model_2.predict(X)
-print(model_2.summary())
+cognitive = model_2.summary()
+
+with open(ppj("OUT_ANALYSIS", "cognitive.pickle"), "wb") as out_file:
+    pickle.dump(cognitive, out_file)
 
 X = file[
     ['constant', 'schooling_years', 'experience', 'experience_squared', 'openness', 'conscientiousness', 'extraversion'
@@ -34,7 +41,10 @@ X = file[
 y = file['log_wages']
 model_3 = sm.OLS(y, X).fit()
 predictions_noncog = model_3.predict(X)
-cognitive = model_3.summary()
+non_cognitive = model_3.summary()
+
+with open(ppj("OUT_ANALYSIS", "non_cognitive.pickle"), "wb") as out_file:
+    pickle.dump(non_cognitive, out_file)
 
 # Basic Mincer plus both
 
@@ -44,7 +54,10 @@ X = file[['constant', 'schooling_years', 'experience', 'experience_squared', 'fl
 y = file['log_wages']
 model_4 = sm.OLS(y, X).fit()
 predictions_all = model_4.predict(X)
-both = model_$.summary()
+both = model_4.summary()
+
+with open(ppj("OUT_ANALYSIS", "both.pickle"), "wb") as out_file:
+    pickle.dump(both, out_file)
 
 # Regression for Occupation Groups
 
@@ -59,3 +72,6 @@ for groups in file.occupation.unique():
 
     model_5 = sm.OLS(y, X).fit()
     Occupational_results = model_5.summary()
+    with open(ppj("OUT_ANALYSIS", "Occupational_results.pickle"), "wb") as out_file:
+        pickle.dump(Occupational_results, out_file)
+
