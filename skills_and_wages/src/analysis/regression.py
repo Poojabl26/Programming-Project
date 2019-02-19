@@ -2,6 +2,7 @@ import statsmodels.api as sm
 import pandas as pd
 from bld.project_paths import project_paths_join as ppj
 import pickle
+from datetime import datetime
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
@@ -75,3 +76,5 @@ for groups in file.occupation.unique():
     with open(ppj("OUT_ANALYSIS", "Occupational_results.pickle"), "wb") as out_file:
         pickle.dump(Occupational_results, out_file)
 
+end_time = datetime.now()
+print('Execution duration: {}'.format(end_time - start_time))

@@ -8,7 +8,7 @@ def build(ctx):
         # Illustrate use of run_py_script with automatic model specification.
         ctx(
             features='run_py_script',
-            source='regression.py',
+            source='schelling.py',
             deps=[
                 ctx.path_to(ctx, 'OUT_DATA', 'initial_locations.csv'),
                 ctx.path_to(ctx, 'IN_MODEL_CODE', 'agent.py'),

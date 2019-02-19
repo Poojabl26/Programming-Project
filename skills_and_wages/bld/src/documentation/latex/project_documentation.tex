@@ -52,7 +52,7 @@
 
 
 \title{Documentation of the Skills and Wages project}
-\date{18 February 2019}
+\date{19 February 2019}
 \release{}
 \author{Poooja Bansal}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -245,32 +245,7 @@ Documentation of the code in \sphinxstyleemphasis{src.analysis}. This is the cor
 
 
 \section{Schelling example}
-\label{\detokenize{analysis:module-src.analysis.schelling}}\label{\detokenize{analysis:schelling-example}}\index{src.analysis.schelling (module)@\spxentry{src.analysis.schelling}\spxextra{module}}
-Run a Schelling (1969, \sphinxcite{references:schelling69}) segregation
-model and store a list with locations by type at each cycle.
-
-The scripts expects that a model name is passed as an
-argument. The model name must correspond to a file called
-\sphinxcode{\sphinxupquote{{[}model\_name{]}.json}} in the “IN\_MODEL\_SPECS” directory.
-\index{run\_analysis() (in module src.analysis.schelling)@\spxentry{run\_analysis()}\spxextra{in module src.analysis.schelling}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{analysis:src.analysis.schelling.run_analysis}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{run\_analysis}}}{\emph{agents}, \emph{model}}{}
-Given an initial set of \sphinxstyleemphasis{agents} and the \sphinxstyleemphasis{model}’s parameters,
-return a list of dictionaries with \sphinxstyleemphasis{type: N x 2} items.
-
-\end{fulllineitems}
-
-\index{setup\_agents() (in module src.analysis.schelling)@\spxentry{setup\_agents()}\spxextra{in module src.analysis.schelling}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{analysis:src.analysis.schelling.setup_agents}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{setup\_agents}}}{\emph{model}}{}
-Load the simulated initial locations and return a list
-that holds all agents.
-
-\end{fulllineitems}
-
-
+\label{\detokenize{analysis:schelling-example}}
 
 \chapter{Visualisation and results formatting}
 \label{\detokenize{final:visualisation-and-results-formatting}}\label{\detokenize{final:final}}\label{\detokenize{final::doc}}
@@ -374,9 +349,6 @@ John Stachurski and Thomas J. Sargent. Quantitative economics. Available at htt
 \renewcommand{\indexname}{Python Module Index}
 \begin{sphinxtheindex}
 \let\bigletter\sphinxstyleindexlettergroup
-\bigletter{a}
-\item\relax\sphinxstyleindexentry{src.analysis.schelling}\sphinxstyleindexpageref{analysis:\detokenize{module-src.analysis.schelling}}
-\indexspace
 \bigletter{b}
 \item\relax\sphinxstyleindexentry{bld.project\_paths}\sphinxstyleindexpageref{introduction:\detokenize{module-bld.project_paths}}
 \indexspace
