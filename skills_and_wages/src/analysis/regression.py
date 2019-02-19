@@ -20,3 +20,10 @@ y = file['log_wages']
 model = sm.OLS(y, X).fit()
 predictions_mincer = model.predict(X)
 # print(model.summary())
+
+# Basic Mincer plus Cognitive
+X = file[['constant', 'schooling_years', 'experience', 'experience_squared', 'fluency', 'symbol']]
+y = file['log_wages']
+model = sm.OLS(y, X).fit()
+predictions_cog = model.predict(X)
+# print(model.summary())
