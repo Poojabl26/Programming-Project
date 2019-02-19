@@ -13,3 +13,10 @@ start_time = datetime.now()
 
 # Adding coefficient to the file
 file['constant'] = 1
+
+# Basic Mincer Model
+X = file[['constant', 'schooling_years', 'experience', 'experience_squared']]
+y = file['log_wages']
+model = sm.OLS(y, X).fit()
+predictions_mincer = model.predict(X)
+# print(model.summary())
