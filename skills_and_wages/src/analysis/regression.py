@@ -289,3 +289,11 @@ def test_data_output(dftest, node_list):
             number_of_matches += 1
     print('Out of', len(rowaxes), 'tests run, ', number_of_matches,
           'matched the result which is at %', number_of_matches / len(rowaxes))
+
+# To write the node into dot file
+def Export_tree_node(node_list, index):
+    if index == None:
+        return
+    Update_to_dot_file(node_list, node_list[index])
+    Export_tree_node(node_list, node_list[index].left_child_id)
+    Export_tree_node(node_list, node_list[index].right_child_id)
