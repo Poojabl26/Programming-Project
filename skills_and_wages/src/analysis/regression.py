@@ -87,3 +87,10 @@ file = file.loc[:, ['openness', 'conscientiousness', 'extraversion',
        'agreeableness', 'schooling_years', 'fluency', 'symbol', 'neuroticism',
        'experience', 'experience_squared',
        'wage_binary']]
+
+
+msk = np.random.rand(len(file)) < 0.8
+
+train = file[msk]
+
+test = file[~msk]
