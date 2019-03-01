@@ -345,3 +345,7 @@ fo.close()
 print('The following are the nodes created in the decision tree')
 for node in node_list:
     print(node)
+
+# Data set validation
+df_validation = test
+test_data_output(test, node_list)
