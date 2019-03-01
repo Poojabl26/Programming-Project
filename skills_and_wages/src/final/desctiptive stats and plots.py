@@ -38,4 +38,4 @@ for i, j in enumerate(traits):
              bins=int(180/4), color = 'darkblue',
              hist_kws={'edgecolor':'black'},
              kde_kws={'linewidth': 4})
-plt.savefig('distplot.png')
+plt.savefig(ppj("OUT_figures",'distplot.png'))
