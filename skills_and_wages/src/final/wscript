@@ -7,11 +7,9 @@ def build(ctx):
 
         ctx(
             features='run_py_script',
-            source='plot_locations.py',
+            source='Descriptive.py',
             deps=[
-                ctx.path_to(ctx, 'OUT_ANALYSIS', 'schelling_{}.pickle'.format(model)),
-                ctx.path_to(ctx, 'IN_MODEL_SPECS', '{}.json'.format(model))
-            ],
+                ctx.path_to(ctx, 'OUT_DATA', '),
             target=ctx.path_to(ctx, 'OUT_FIGURES', 'schelling_{}.png'.format(model)),
             append=model,
             name='plot_locations_{}'.format(model)
