@@ -15,7 +15,7 @@ def build(ctx):
 		ctx.path_to(ctx, 'OUT_ANALYSIS', 'non_cognitive.pickle'),
 		 ctx.path_to(ctx, 'OUT_ANALYSIS', 'both.pickle'),
 		 ctx.path_to(ctx, 'OUT_ANALYSIS', 'Occupational_results.pickle'),
-		            ]
+		ctx.path_to(ctx, 'OUT_ANALYSIS', 'decision_tree.dot')            ]
         )
 
 
