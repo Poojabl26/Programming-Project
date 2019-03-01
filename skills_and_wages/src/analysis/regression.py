@@ -340,3 +340,8 @@ Export_tree_node(node_list, 0)
 
 fo.write("}")
 fo.close()
+
+# print all nodes created by TDIDT
+print('The following are the nodes created in the decision tree')
+for node in node_list:
+    print(node)
