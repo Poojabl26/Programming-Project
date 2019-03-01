@@ -14,6 +14,7 @@ import copy
 import csv
 import os.path
 from sklearn.datasets import load_iris
+import pydot
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
@@ -359,3 +360,4 @@ for node in node_list:
 # Data set validation
 df_validation = test
 test_data_output(test, node_list)
+
