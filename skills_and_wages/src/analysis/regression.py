@@ -327,3 +327,7 @@ def Update_to_dot_file(node_list, node):
                 node_list[node.parent_id].threshold) + "\"] ;\n"
         fo.write(node_relation)
     return
+
+# run TDIDT
+node_list = [TDIDTNode()]
+k = Create_tree_TDIDT(node_list,train,0,0)
