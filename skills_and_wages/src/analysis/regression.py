@@ -267,3 +267,14 @@ def Create_tree_TDIDT(node_list, dfa, current_node_id, tree_depth):
     Create_tree_TDIDT(node_list, df2, current_node.right_child_id, tree_depth + 1)
 
     return df_temp
+
+# Parses through the decision tree to find outcome.
+def classify(row, dftest, node_list):
+    current_node = node_list[0]
+
+    while not current_node.is_leaf:
+        if (dftest.iat[row, dftest.columns.get_loc(str(current_node.label))] < current_node.threshold):
+            current_node = node_list[current_node.left_child_id]
+        else:
+            current_node = node_list[current_node.right_child_id]
+    return current_node.outcome
