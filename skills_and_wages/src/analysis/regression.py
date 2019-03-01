@@ -156,3 +156,15 @@ class TDIDTNode:
 
     def __str__(self):
         return "{} {} {} {} ".format(self.label, self.threshold, self.pplus, self.pminus)
+
+# The function returns the information gain based on the positive and negative side split
+def get_information_gain(ppos=335, pneg=340, npos=0, nneg=8):
+    total = float(ppos + pneg + npos + nneg)
+    p_total = float(ppos + pneg)
+    n_total = float(npos + nneg)
+    information_gain = entropy((ppos + npos) / total, (pneg + nneg) / total)
+    if p_total > 0:
+        information_gain -= p_total / total * entropy(ppos / p_total, pneg / p_total)
+    if n_total > 0:
+        information_gain -= n_total / total * entropy(npos / n_total, nneg / n_total)
+    return information_gain
