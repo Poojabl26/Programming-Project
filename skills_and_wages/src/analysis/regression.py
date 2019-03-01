@@ -3,6 +3,17 @@ import pandas as pd
 from bld.project_paths import project_paths_join as ppj
 import pickle
 from datetime import datetime
+import numpy as np
+from random import choice
+from numpy import array, dot, random, asfarray
+from sklearn import tree
+import graphviz as gv
+import re
+import math
+import copy
+import csv
+import os.path
+from sklearn.datasets import load_iris
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
@@ -94,3 +105,54 @@ msk = np.random.rand(len(file)) < 0.8
 train = file[msk]
 
 test = file[~msk]
+
+#This is a node for building a tree.
+
+
+class TDIDTNode:
+
+    def __init__(self, parent_id=-1, left_child_id=None, right_child_id=None):
+        self.parent_id = parent_id
+        self.is_Left = False
+        # self.direction      = direction
+        self.left_child_id = left_child_id
+        self.right_child_id = right_child_id
+        self.is_leaf = False
+        self.outcome = None
+        # only needed to fullfill exercise requirements
+        self.identifier = 0
+        self.parent_test_outcome = None
+        self.pplus = None
+        self.pminus = None
+        self.label = None
+        self.threshold = None
+
+    def setLeftChild(self, id):
+        self.left_child_id = id
+
+    def setRightChild(self, id):
+        self.right_child_id = id
+
+    def setpplus(self, id):
+        self.pplus = id
+
+    def setpminus(self, id):
+        self.pminus = id
+
+    def setthreshold(self, id):
+        self.threshold = id
+
+    def setlabel(self, id):
+        self.label = id
+
+    def setdirection(self, id):
+        self.direction = direction
+
+    def setidentifier(self, id):
+        self.identifier = id
+
+    def setis_Left(self, id):
+        self.is_Left = id
+
+    def __str__(self):
+        return "{} {} {} {} ".format(self.label, self.threshold, self.pplus, self.pminus)
