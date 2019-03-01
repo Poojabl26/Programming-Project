@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [ label="extraversion[1040 1038]" , fillcolor="#ffffff"] ;
+1 [ label="extraversion[184 961]" , fillcolor="#ffffff"] ;
+0->1 [labeldistance=2.5, labelangle=45, headlabel="<-0.033771469296966686"] ;
+3 [ label="neuroticism[12 328]" , fillcolor="#ffffff"] ;
+1->3 [labeldistance=2.5, labelangle=45, headlabel="<-0.8205222096753348"] ;
+5 [ label="openness[11 212]" , fillcolor="#ff9999"] ;
+3->5 [labeldistance=2.5, labelangle=45, headlabel="<0.4402042959641125"] ;
+6 [ label="neuroticism[1 116]" , fillcolor="#ff9999"] ;
+3->6 [labeldistance=2.5, labelangle=-45, headlabel=">0.4402042959641125"] ;
+4 [ label="experience[172 633]" , fillcolor="#ffffff"] ;
+1->4 [labeldistance=2.5, labelangle=-45, headlabel=">-0.8205222096753348"] ;
+7 [ label="symbol[4 137]" , fillcolor="#ff9999"] ;
+4->7 [labeldistance=2.5, labelangle=45, headlabel="<13.0"] ;
+8 [ label="extraversion[168 496]" , fillcolor="#ff9999"] ;
+4->8 [labeldistance=2.5, labelangle=-45, headlabel=">13.0"] ;
+2 [ label="extraversion[856 77]" , fillcolor="#ffffff"] ;
+0->2 [labeldistance=2.5, labelangle=-45, headlabel=">-0.033771469296966686"] ;
+9 [ label="conscientiousness[174 62]" , fillcolor="#ffffff"] ;
+2->9 [labeldistance=2.5, labelangle=45, headlabel="<0.188615937168564"] ;
+11 [ label="fluency[20 24]" , fillcolor="#ff9999"] ;
+9->11 [labeldistance=2.5, labelangle=45, headlabel="<-1.0009779441949662"] ;
+12 [ label="openness[154 38]" , fillcolor="#99ff99"] ;
+9->12 [labeldistance=2.5, labelangle=-45, headlabel=">-1.0009779441949662"] ;
+10 [ label="extraversion[682 15]" , fillcolor="#ffffff"] ;
+2->10 [labeldistance=2.5, labelangle=-45, headlabel=">0.188615937168564"] ;
+13 [ label="schooling_years[215 13]" , fillcolor="#99ff99"] ;
+10->13 [labeldistance=2.5, labelangle=45, headlabel="<0.4663512454827478"] ;
+14 [ label="symbol[467 2]" , fillcolor="#99ff99"] ;
+10->14 [labeldistance=2.5, labelangle=-45, headlabel=">0.4663512454827478"] ;
+}
