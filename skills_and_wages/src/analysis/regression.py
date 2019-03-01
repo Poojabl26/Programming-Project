@@ -297,3 +297,33 @@ def Export_tree_node(node_list, index):
     Update_to_dot_file(node_list, node_list[index])
     Export_tree_node(node_list, node_list[index].left_child_id)
     Export_tree_node(node_list, node_list[index].right_child_id)
+
+
+# To write the node into dot file
+def Update_to_dot_file(node_list, node):
+    # create node
+    if (node.is_leaf and (node.outcome)):
+        node_description = str(node.identifier) + " [ label=\"" + node.label + "[" + str(node.pplus) + " " + str(
+            node.pminus) + "]" + "\" , fillcolor=\"#99ff99\"] ;\n"
+    elif (node.is_leaf and (node.outcome == False)):
+        node_description = str(node.identifier) + " [ label=\"" + node.label + "[" + str(node.pplus) + " " + str(
+            node.pminus) + "]" + "\" , fillcolor=\"#ff9999\"] ;\n"
+    else:
+        node_description = str(node.identifier) + " [ label=\"" + node.label + "[" + str(node.pplus) + " " + str(
+            node.pminus) + "]" + "\" , fillcolor=\"#ffffff\"] ;\n"
+
+    fo.write(node_description)
+
+    if (node.parent_id != -1):
+        # create relation
+        condition = node.identifier % 2
+        if (condition):
+            node_relation = str(node.parent_id) + "->" + str(
+                node.identifier) + " [labeldistance=2.5, labelangle=45, headlabel=\"<" + str(
+                node_list[node.parent_id].threshold) + "\"] ;\n"
+        else:
+            node_relation = str(node.parent_id) + "->" + str(
+                node.identifier) + " [labeldistance=2.5, labelangle=-45, headlabel=\">" + str(
+                node_list[node.parent_id].threshold) + "\"] ;\n"
+        fo.write(node_relation)
+    return
