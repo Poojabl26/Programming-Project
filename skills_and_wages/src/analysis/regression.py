@@ -168,3 +168,15 @@ def get_information_gain(ppos=335, pneg=340, npos=0, nneg=8):
     if n_total > 0:
         information_gain -= n_total / total * entropy(npos / n_total, nneg / n_total)
     return information_gain
+
+# This one calculates the total number of positive and negative outputs
+def number_of_positives(dflocal):
+    rowaxes, columnaxes = dflocal.axes
+    number_of_positives = 0
+    number_of_negatives = 0
+    for i in range(len(rowaxes)):
+        if (dflocal.iat[i, -1] == 1.0):
+            number_of_positives += 1
+        else:
+            number_of_negatives += 1
+    return number_of_positives, number_of_negatives
