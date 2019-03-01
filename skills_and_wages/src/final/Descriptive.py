@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import math
 import scipy.stats as stats
 import pylab as pl
+from bld.project_paths import project_paths_join as ppj
+import matplotlib.image as mpimg
+
+
 
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
@@ -39,3 +43,11 @@ for i, j in enumerate(traits):
              hist_kws={'edgecolor':'black'},
              kde_kws={'linewidth': 4})
 plt.savefig(ppj("OUT_FIGURES",'distplot.png'))
+
+plt.clf()
+#Importing the image generated using dot file and exporting it to out figures folder
+img=mpimg.imread(ppj("IN_DATA", 'decisiontree.png'))
+imgplot = plt.imshow(img)
+plt.savefig(ppj("OUT_FIGURES", "tree"))
+
+
