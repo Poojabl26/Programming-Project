@@ -9,4 +9,18 @@ import pylab as pl
 
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
-g
+#Descriptive tables
+
+print(file.describe())
+print(file.groupby('occupation').describe())
+
+#descriptive plots
+
+#Correlation Heatmap
+Var_Corr = file.corr()
+sns.set_style(style = 'white')
+cmap = sns.diverging_palette(250, 10, as_cmap=True)
+heatmp = sns.heatmap(Var_Corr,cmap=cmap, linewidths=1)
+plt.savefig(ppj("OUT_figures",'heatmap.png'))
+plt.clf()
+
