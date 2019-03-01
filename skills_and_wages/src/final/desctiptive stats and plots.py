@@ -29,3 +29,13 @@ sns.set(style="darkgrid")
 bar = sns.countplot(x="occupation", data=file)
 plt.savefig(ppj("OUT_figures",'occupation_count.png'))
 plt.clf()
+
+#Density plot(All Relevant Independent  Variables)
+traits = [file['fluency'], file['symbol'], file['openness'], file['conscientiousness'], file['extraversion'], file['agreeableness'],
+          file['neuroticism'], file['schooling_years'], file['experience']]
+for i, j in enumerate(traits):
+    plt.subplot(3, 3, i+1) ,sns.distplot(j, hist=True, kde=True,
+             bins=int(180/4), color = 'darkblue',
+             hist_kws={'edgecolor':'black'},
+             kde_kws={'linewidth': 4})
+plt.savefig('distplot.png')
