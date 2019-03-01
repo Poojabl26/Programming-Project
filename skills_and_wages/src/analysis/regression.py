@@ -75,3 +75,15 @@ for groups in file.occupation.unique():
     Occupational_results = model_5.summary()
     with open(ppj("OUT_ANALYSIS", "Occupational_results.pickle"), "wb") as out_file:
         pickle.dump(Occupational_results, out_file)
+
+file['wage_binary'] = 0
+
+file.loc[file['log_wages'] > file.log_wages.median(), "wage_binary"] = 1.0
+print(file.wage_binary.value_counts())
+
+
+
+file = file.loc[:, ['openness', 'conscientiousness', 'extraversion',
+       'agreeableness', 'schooling_years', 'fluency', 'symbol', 'neuroticism',
+       'experience', 'experience_squared',
+       'wage_binary']]
