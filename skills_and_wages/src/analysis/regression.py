@@ -331,3 +331,12 @@ def Update_to_dot_file(node_list, node):
 # run TDIDT
 node_list = [TDIDTNode()]
 k = Create_tree_TDIDT(node_list,train,0,0)
+
+# For exporting the decision tree
+fo=open(ppj("OUT_ANALYSIS", "decision_tree.dot"),"w")
+print("Name of the dot file: ",fo.name)
+fo.write("digraph Tree {\nnode [shape=box, style=\"filled\", color=\"black\"] ;\n")
+Export_tree_node(node_list, 0)
+
+fo.write("}")
+fo.close()
