@@ -75,4 +75,3 @@ for groups in file.occupation.unique():
     Occupational_results = model_5.summary()
     with open(ppj("OUT_ANALYSIS", "Occupational_results.pickle"), "wb") as out_file:
         pickle.dump(Occupational_results, out_file)
-
