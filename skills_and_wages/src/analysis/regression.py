@@ -278,3 +278,14 @@ def classify(row, dftest, node_list):
         else:
             current_node = node_list[current_node.right_child_id]
     return current_node.outcome
+
+# Compares the predicted output to actual output and prints the likelihood
+def test_data_output(dftest, node_list):
+    rowaxes, columnaxes = dftest.axes
+    number_of_matches = 0;
+    for row in range(len(rowaxes)):
+        predict_op = classify(row, dftest, node_list)
+        if (dftest.iat[row, -1] == predict_op):
+            number_of_matches += 1
+    print('Out of', len(rowaxes), 'tests run, ', number_of_matches,
+          'matched the result which is at %', number_of_matches / len(rowaxes))
