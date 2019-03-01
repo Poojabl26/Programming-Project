@@ -1,0 +1,15 @@
+#! python
+
+
+def build(ctx):
+
+    for model in 'baseline', 'max_moves_2':
+
+        ctx(
+            features='run_py_script',
+            source='Descriptive.py',
+            deps= [ctx.path_to(ctx, 'OUT_DATA', 'data.csv'),ctx.path_to(ctx, 'OUT_ANALYSIS', 'decision_tree.dot')],
+            target=[ctx.path_to(ctx, 'OUT_FIGURES', 'heatmap.png'),ctx.path_to(ctx, 'OUT_FIGURES', 'occupation_count.png'), ctx.path_to(ctx, 'OUT_FIGURES', 'distplot.png'),
+ctx.path_to(ctx, 'OUT_FIGURES', 'tree.png')],
+            name='Descriptive'
+        )
