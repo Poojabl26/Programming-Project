@@ -24,3 +24,8 @@ heatmp = sns.heatmap(Var_Corr,cmap=cmap, linewidths=1)
 plt.savefig(ppj("OUT_figures",'heatmap.png'))
 plt.clf()
 
+#Bar Chart Showing Frequency for Occupation
+sns.set(style="darkgrid")
+bar = sns.countplot(x="occupation", data=file)
+plt.savefig(ppj("OUT_figures",'occupation_count.png'))
+plt.clf()
