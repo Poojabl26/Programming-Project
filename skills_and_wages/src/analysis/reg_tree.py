@@ -359,5 +359,3 @@ for node in node_list:
 # Data set validation
 df_validation = test
 test_data_output(test, node_list)
-
-print("pooja")
