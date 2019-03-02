@@ -20,7 +20,6 @@
 *.nav
 *.o
 *.out
-*.pdf
 *.pdfsync
 *.prj
 *.pyc
@@ -50,7 +49,6 @@ debug
 Debug
 final_out
 formatted_data
-project_documentation
 scons.py
 test
 Test
