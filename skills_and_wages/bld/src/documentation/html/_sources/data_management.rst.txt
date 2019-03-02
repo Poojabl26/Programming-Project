@@ -18,3 +18,5 @@ For personality we had 15 variables to be reduced to 5 be taking averages of 3 v
 We then generated the experience and experience squared variables for the Mincer equation. 
 We then took a log of wages to improve our regression model. 
 For occupations, we combined similar categories and sorted them in order. 
+
+vgfghdjtrddyt

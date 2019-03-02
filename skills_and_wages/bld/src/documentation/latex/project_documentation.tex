@@ -224,9 +224,10 @@ and backslashes replaced by forward slashes.
 \label{\detokenize{original_data:original-data}}\label{\detokenize{original_data:id1}}\label{\detokenize{original_data::doc}}
 Documentation of the different datasets in \sphinxstyleemphasis{original\_data}.
 
-In the original data section you would store the raw data, which you should not manipulate to ensure reproducibility.
+In the original data section we stored the raw data files which will be manipulated in our python codes. These should not be manipulated and saved in the same folder as it would hamper project reproducibility.
+4 file exist in our folder. All are state files which are readable in python
 
-If you want to include multiple data sets, you can also create subfolders for the sake of a clear structure.
+Along with this I have put an image taken which we generated later using our analysis. The original format was in graphviz dot file. In the figure code file I imported the image from this folder and exported it to the out\_figures folder using the codes in final python file.
 
 
 \chapter{Data management}
@@ -242,6 +243,8 @@ For personality we had 15 variables to be reduced to 5 be taking averages of 3 v
 We then generated the experience and experience squared variables for the Mincer equation.
 We then took a log of wages to improve our regression model.
 For occupations, we combined similar categories and sorted them in order.
+
+vgfghdjtrddyt
 
 
 \chapter{Main model estimations / simulations}
@@ -282,10 +285,10 @@ Documentation of the code in \sphinxstyleemphasis{src.final}.
 Purpose of the different files (rename them to your liking):
 \begin{itemize}
 \item {} 
-\sphinxcode{\sphinxupquote{research\_paper.tex}} contains the actual paper.
+\sphinxcode{\sphinxupquote{research\_paper.tex}} contains the seminar paper “Labor Market Returns to Cognitive and NOn-Cognitive Skills across Different Occupations”
 
 \item {} 
-\sphinxcode{\sphinxupquote{research\_pres\_30min.tex}} contains a typical conference presentation.
+\sphinxcode{\sphinxupquote{research\_pres\_30min.tex}} contains conference presentation for the
 
 \item {} 
 \sphinxcode{\sphinxupquote{research\_pres\_90min.tex}} contains a full-length seminar presentation (add by yourself).
@@ -300,7 +303,7 @@ Purpose of the different files (rename them to your liking):
 \label{\detokenize{library:code-library}}\label{\detokenize{library:library}}\label{\detokenize{library::doc}}
 The directory \sphinxstyleemphasis{src.library} provides code that may be used by different steps of the analysis. Little code snippets for input / output or stuff that is not directly related to the model would go here.
 
-The distinction from the \DUrole{xref,std,std-ref}{model\_code} directory is a bit arbitrary, but I have found it useful in the past.
+No codes are stored in the library for the purpose of this project.
 
 
 \chapter{References}
