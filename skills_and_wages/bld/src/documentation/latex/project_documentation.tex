@@ -52,7 +52,7 @@
 
 
 \title{Documentation of the Skills and Wages project}
-\date{01 March 2019}
+\date{02 March 2019}
 \release{}
 \author{Poooja Bansal}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -233,6 +233,16 @@ If you want to include multiple data sets, you can also create subfolders for th
 \label{\detokenize{data_management:data-management}}\label{\detokenize{data_management:id1}}\label{\detokenize{data_management::doc}}
 Documentation of the code in \sphinxstyleemphasis{src.data\_management}.
 
+\phantomsection\label{\detokenize{data_management:module-src.data_management.get_skill_data}}\index{src.data\_management.get\_skill\_data (module)@\spxentry{src.data\_management.get\_skill\_data}\spxextra{module}}
+We start with merging all the relevant data files. SOEP has provided with the data for two different waves using different questionnaires. We first merge all of the datasets and then keep only the useful variables.
+Now, all our data for skill variables, be it cognitive or non-cognitive was categorical. So we first converted the categorical figures into numeric to perform mathematical operations on them. We then rename the important variables to be used later for our convenience.
+Then we restrict our data with individuals of age between 20 and 60 and drop individuals with occupations not useful in our analysis. After this, we dropped all the missing values by first replacing them nan.
+The variables for Cognitive abilities were standardised using the sklearn library.
+For personality we had 15 variables to be reduced to 5 be taking averages of 3 variables corresponding to a particular personality trait. Out of those 15, 4 had to be reversed since they represented the opposite quality corresponding the respective trait. We then created 5 variables by taking the average and standardising them.
+We then generated the experience and experience squared variables for the Mincer equation.
+We then took a log of wages to improve our regression model.
+For occupations, we combined similar categories and sorted them in order.
+
 
 \chapter{Main model estimations / simulations}
 \label{\detokenize{analysis:main-model-estimations-simulations}}\label{\detokenize{analysis:analysis}}\label{\detokenize{analysis::doc}}
@@ -316,6 +326,9 @@ John Stachurski and Thomas J. Sargent. Quantitative economics. Available at htt
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{b}
 \item\relax\sphinxstyleindexentry{bld.project\_paths}\sphinxstyleindexpageref{introduction:\detokenize{module-bld.project_paths}}
+\indexspace
+\bigletter{d}
+\item\relax\sphinxstyleindexentry{src.data\_management.get\_skill\_data}\sphinxstyleindexpageref{data_management:\detokenize{module-src.data_management.get_skill_data}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}
