@@ -47,7 +47,7 @@ master_doc = "index"
 
 # General information about the project.
 project = u"Skills and Wages"
-copyright = u"2019-, Poooja Bansal"
+copyright = u"2019-, Pooja Bansal"
 
 # The version info for the project you"re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -196,7 +196,7 @@ latex_documents = [(
     "index",
     "project_documentation.tex",
     "Documentation of the Skills and Wages project",
-    "Poooja Bansal",
+    "Pooja Bansal",
     "manual"
 )]
 
