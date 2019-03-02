@@ -16,7 +16,5 @@ Welcome to the Skills and Wages project's documentation!
     analysis
     final
     paper
-    model_code
-    model_specs
     library
     references

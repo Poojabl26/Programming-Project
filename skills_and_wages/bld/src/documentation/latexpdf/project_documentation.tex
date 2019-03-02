@@ -99,7 +99,7 @@ Research paper and presentations.
 
 \end{enumerate}
 
-It can be useful to have code and model parameters available to more than one of these steps, in that case see sections {\hyperref[\detokenize{model_specs:model-specifications}]{\sphinxcrossref{\DUrole{std,std-ref}{Model specifications}}}}, {\hyperref[\detokenize{model_code:model-code}]{\sphinxcrossref{\DUrole{std,std-ref}{Model code}}}}, and {\hyperref[\detokenize{library:library}]{\sphinxcrossref{\DUrole{std,std-ref}{Code library}}}}.
+It can be useful to have code and model parameters available to more than one of these steps, in that case see sections \DUrole{xref,std,std-ref}{model\_specifications}, \DUrole{xref,std,std-ref}{model\_code}, and {\hyperref[\detokenize{library:library}]{\sphinxcrossref{\DUrole{std,std-ref}{Code library}}}}.
 
 First of all, think about whether this structure fits your needs \textendash{} if it does not, you need to adjust (delete/add/rename) directories and files in the following locations:
 \begin{itemize}
@@ -263,8 +263,11 @@ We then add both skills (Cognitive and Non-Cognitive)to the specification.
 
 We define our independent variables as X and dependent variables as Y, For each specification, we generate a new matrix. We fit our linear model using the OLS module offered by the sm library and then print the summary which contains the regression output for all the defined model.
 
-After the first 4 regression, we perform regression for different occupational groups by defining a loop for the values in the our column occupation which contains : 1,2,3,4 thus generates results for 4 different outputs for all categories,
+After the first 4 regression, we perform regression for different occupational groups by defining a loop for the values in the our column occupation which contains : 1,2,3,4 thus generates results for 4 different outputs for all categories.
 
+
+\section{Decision Tree}
+\label{\detokenize{analysis:decision-tree}}
 
 \chapter{Visualisation and results formatting}
 \label{\detokenize{final:visualisation-and-results-formatting}}\label{\detokenize{final:final}}\label{\detokenize{final::doc}}
@@ -293,34 +296,11 @@ Purpose of the different files (rename them to your liking):
 \end{itemize}
 
 
-\chapter{Model code}
-\label{\detokenize{model_code:model-code}}\label{\detokenize{model_code:id1}}\label{\detokenize{model_code::doc}}
-The directory \sphinxstyleemphasis{src.model\_code} contains source files that might differ by model and that are potentially used at various steps of the analysis.
-
-For example, you may have a class that is used both in the {\hyperref[\detokenize{analysis:analysis}]{\sphinxcrossref{\DUrole{std,std-ref}{Main model estimations / simulations}}}} and the {\hyperref[\detokenize{final:final}]{\sphinxcrossref{\DUrole{std,std-ref}{Visualisation and results formatting}}}} steps. Additionally, maybe you have different utility functions in the baseline version and for your robustness check. You can just inherit from the baseline class and override the utility function then.
-
-
-\section{The \sphinxstyleliteralintitle{\sphinxupquote{Agent}} class of the Schelling example}
-\label{\detokenize{model_code:the-agent-class-of-the-schelling-example}}
-
-\chapter{Model specifications}
-\label{\detokenize{model_specs:model-specifications}}\label{\detokenize{model_specs:id1}}\label{\detokenize{model_specs::doc}}
-The directory \sphinxstyleemphasis{src.model\_specs} contains \sphinxhref{http://www.json.org/}{JSON} files with model specifications. The choice of JSON is motivated by the attempt to be language-agnostic: JSON is quite expressive and there are parsers for nearly all languages. %
-\begin{footnote}[1]\sphinxAtStartFootnote
-Stata is the only execption I know of. You find a  converter in the wscript file of the Stata branch. Note that there is \sphinxhref{http://ideas.repec.org/c/boc/bocode/s457407.html}{insheetjson}, but that will read a JSON file into the data set rather than into macros, which is what we need here.
-%
-\end{footnote}
-
-The best way to use this is to save a model as \sphinxcode{\sphinxupquote{{[}model\_name{]}.json}} and then pass \sphinxcode{\sphinxupquote{{[}model\_name{]}}} to your code using the \sphinxcode{\sphinxupquote{append}} keyword of the \sphinxcode{\sphinxupquote{run\_py\_script}} task generator.
-\begin{quote}
-\end{quote}
-
-
 \chapter{Code library}
 \label{\detokenize{library:code-library}}\label{\detokenize{library:library}}\label{\detokenize{library::doc}}
 The directory \sphinxstyleemphasis{src.library} provides code that may be used by different steps of the analysis. Little code snippets for input / output or stuff that is not directly related to the model would go here.
 
-The distinction from the {\hyperref[\detokenize{model_code:model-code}]{\sphinxcrossref{\DUrole{std,std-ref}{Model code}}}} directory is a bit arbitrary, but I have found it useful in the past.
+The distinction from the \DUrole{xref,std,std-ref}{model\_code} directory is a bit arbitrary, but I have found it useful in the past.
 
 
 \chapter{References}
