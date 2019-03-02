@@ -6,7 +6,7 @@ def build(ctx):
         # Illustrate use of run_py_script with automatic model specification.
         ctx(
             features='run_py_script',
-            source='regression.py',
+            source='reg_tree.py',
             deps= ctx.path_to(ctx, 'OUT_DATA', 'data.csv')
             ,
             target=[
