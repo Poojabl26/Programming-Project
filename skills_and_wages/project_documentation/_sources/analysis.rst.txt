@@ -18,7 +18,7 @@ We run the regression using statsmodel python package.
 
 First we investigate the returns to earnings by  using the basic Mincer Equation which used 3 variables : Years of education, Years of Experience and Square of years of experience. 
  We will then expand the basic specification by adding the cognitive skills : Fluency and Symbol test score which we standardised. 
- We then introduce only non cognitive skills in the basic specification : Openness, Conscientiousness, Extraverion , Agreeableness and Neuroticism. 
+ We then introduce only non cognitive skills in the basic specification : Openness, Conscientiousness, Extraversion , Agreeableness and Neuroticism. 
 
 We then add both skills (Cognitive and Non-Cognitive)to the specification. 
 
