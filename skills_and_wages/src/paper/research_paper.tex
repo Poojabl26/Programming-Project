@@ -125,13 +125,34 @@ If you are using this template, please cite this item from the references: \cite
 
 \citet{Schelling69} example in the code is taken from \citet{StachurskiSargent13}
 
-The decision rule of an agent is the following:
-\input{formulas/decision_rule}
+\section*{Data}
+
+This paper analyzes the data from the German Socio Economic Panel. SOEP is a wide-ranging representative micro-database providing comprehensive socio-economic information on private households in Germany. The panel was first started in 1984 and data for about 12,200 randomly selected respondents, in West Germany, was collected. After German reunification, data for about 4500 respondents, from East Germany, has been added. We use two recent waves which include data on cognitive skills (2005), two short verbal and performance tests, and personality traits (2006), items pertaining to the Big Five Factor model. We retrieved the data for occupation and education from the personal questionnaire of 2005. 
+
+\subsection*{\textit{\underline{Measures of Cognitive skills}}}
+The fully fledged IQ tests couldn’t be conducted because of the large scale panel survey.The organization conducted two short tests to evaluate cognitive skills in year 2006. These were: A Word Fluency Test and Symbol Correspondence Test. These tests correspond to modules  of the Wechsler Adult Intelligence Scale (WAIS)\footnote{Wechsler Adult Intelligence Scale (WAIS) comprises 14 modules, seven on verbal IQ and seven on performance IQ (Groth-Marnat, 1997, Kline, 1999)}. 
+For the Word Fluency test, which corresponds to the verbal IQ module of WAIS, respondents were asked to name as many animals as possible in 90 seconds and for the Symbol Recognition Test, corresponding to the Performance IQ module, respondents had to match as many number and symbols as possible in 90 seconds using the correspondence list provided to them. We have standardized the test scores since they were measured on different scales.
+
+\subsection*{\textit{\underline{Measures of Non-Cognitive skills}}}
+
+Over time, psychologists have developed a widely accepted personality taxonomy known as the Big Five model which identifies five broad aspects of Personality namely: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism 
+(OCEAN). Openness can be defined as a tendency to experience new adventures and emotions, to develop unusual ideas, and to have curiosity. Conscientiousness can be seen as a desire to act in an organized, disciplined, and dutiful manners. Aiming for organized planning instead of spontaneous behaviours. Extraversion can be associated with optimistic behaviours and positive energy, where a person tends to seek attention and interaction in the company of others. Agreeableness can measure if a person is well tempered and cooperative or if he/she is suspicious or untrustworthy. Neuroticism defines the level of emotional stability of a person and can be related to unpleasant emotions such as depression, anger or vulnerability. \par
+In 2005, SOEP included questions related to individuals’ personality. The questions are associated to the Big Five Factor model which comprises of the personality aspects described above. Since extensive questioning to generate the scores pertaining to Personality wasn’t feasible in SOEP, the data instead provides us with 15 items\footnote{The items included and the classification is presented in the Appendix Table 1} in which three items apprehends to one personality dimension. The questions were answered on a scale of 1[does not apply] to 7[applies fully]. We have taken averages of the each three items of the respective personality factor of the big five model and standardized them. 
+
+\subsection*{\textit{\underline{Determination of Hourly Wages }}}
+
+SOEP doesn’t collect data on hourly wages directly. Instead it provides data on monthly income from primary employment and actual weekly working hours including overtime. We calculate the hourly wages by dividing the monthly income with the product of weekly hours and the estimated factor of 4.3\footnote{Number of weeks/Number of months = 52/12 = 4.3} for the number of weeks. The measurement errors, possibly existing in working hours or monthly income can influence the results. 
+
+\subsection*{\textit{\underline{Analytical Sample}}}
+
+To address the research question posted in the study, the analytical sample is limited to individuals between age 20 and 60  who were in full time employment, in order to include only those who most likely have completed their education and were below the retirement age. We excluded the observations which had missing values. For individuals reporting zero wages, a small value of 0.0001 was assigned before it was transformed to a logarithmic scale. For categorizing the occupations, we used the  Goldthorpe \footnote{ Goldthorpe class scheme combining occupation categories in light of level of income, economic security, advancement, work authority and responsibility.  
+} classification scale.  We have, however,  excluded the category for  agricultural workers and self-employed people due to their very small sample size. The total sample size turned out to be 2581\footnote{The sample size in our analysis rather low since we had to restrict our sample to the  individuals who are SOEP respondents in both 2005 and 2006 and, more limiting, were the CAPI surveyed in 2006 for cognitive skills, since only those were the only potential respondents of the ultra-short IQ-tests.Further, for occupational classification we used the data from the generated variable file which led to a further reduction.}
+
 
 \begin{figure}
     \caption{Segregation by cycle in the baseline \citet{Schelling69} model as in the \citet{StachurskiSargent13} example}
     
-    \includegraphics[width=\textwidth]{../../out/figures/occupation_count}
+    \includegraphics[width=0.5\textwidth]{../../out/figures/occupation_count}
 
 \end{figure}
 
