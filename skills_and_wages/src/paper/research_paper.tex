@@ -98,43 +98,7 @@ The studies so far have discussed the importance of these skills in the labor ma
 
 This paper continues in the following order: In the next section we will discuss some of the literature which focuses on similar research area that helped us structure our expectations. In the Data section, we describe our data and source. In the Methodology section, we present our econometric framework, followed by the Result section where the first part explains the general relationship of skills for different individuals and then in the second part, we explore the differences in the relationships across various occupational levels. We then provide the robustness checks and finally conclude our analysis.
 
-\section*{Expectations}
 
-With the prior findings from previous empirical studies on non-cognitive and cognitive skills as determinants of labor market outcomes, we were able to set up expectations for the present study. 
-In line with the previous research, we expect cognitive skills to have either positive or no association with the earnings. With respect to the personality traits used, we expect no significant relation between Extraversion and wages, a positive relationship for Openness and conscientiousness and negative for Neuroticism and Agreeableness.\par
-
-We believe we are the first one to investigate this skill-wage relationship with respect to occupations using the Goldthorpe classification. So we built our expectations based on our knowledge of the subject.For occupations, we expect cognitive skills to be either positively or not related to the occupational categories. For personality traits, we expect more heterogeneous results for each category of occupation, depending on their work task and roles.
-
-
-\section*{Data}
-
-This paper analyzes the data from the German Socio Economic Panel. SOEP is a wide-ranging representative micro-database providing comprehensive socio-economic information on private households in Germany. The panel was first started in 1984 and data for about 12,200 randomly selected respondents, in West Germany, was collected. After German reunification, data for about 4500 respondents, from East Germany, has been added. We use two recent waves which include data on cognitive skills (2005), two short verbal and performance tests, and personality traits (2006), items pertaining to the Big Five Factor model. We retrieved the data for occupation and education from the personal questionnaire of 2005. 
-
-\subsection*{\textit{\underline{Measures of Cognitive skills}}}
-The fully fledged IQ tests couldn’t be conducted because of the large scale panel survey.The organization conducted two short tests to evaluate cognitive skills in year 2006. These were: A Word Fluency Test and Symbol Correspondence Test. These tests correspond to modules  of the Wechsler Adult Intelligence Scale (WAIS)\footnote{Wechsler Adult Intelligence Scale (WAIS) comprises 14 modules, seven on verbal IQ and seven on performance IQ (Groth-Marnat, 1997, Kline, 1999)}. 
-For the Word Fluency test, which corresponds to the verbal IQ module of WAIS, respondents were asked to name as many animals as possible in 90 seconds and for the Symbol Recognition Test, corresponding to the Performance IQ module, respondents had to match as many number and symbols as possible in 90 seconds using the correspondence list provided to them. We have standardized the test scores since they were measured on different scales.
-
-\subsection*{\textit{\underline{Measures of Non-Cognitive skills}}}
-
-Over time, psychologists have developed a widely accepted personality taxonomy known as the Big Five model which identifies five broad aspects of Personality namely: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism 
-(OCEAN). Openness can be defined as a tendency to experience new adventures and emotions, to develop unusual ideas, and to have curiosity. Conscientiousness can be seen as a desire to act in an organized, disciplined, and dutiful manners. Aiming for organized planning instead of spontaneous behaviours. Extraversion can be associated with optimistic behaviours and positive energy, where a person tends to seek attention and interaction in the company of others. Agreeableness can measure if a person is well tempered and cooperative or if he/she is suspicious or untrustworthy. Neuroticism defines the level of emotional stability of a person and can be related to unpleasant emotions such as depression, anger or vulnerability. \par
-In 2005, SOEP included questions related to individuals’ personality. The questions are associated to the Big Five Factor model which comprises of the personality aspects described above. Since extensive questioning to generate the scores pertaining to Personality wasn’t feasible in SOEP, the data instead provides us with 15 items\footnote{The items included and the classification is presented in the Appendix Table 1} in which three items apprehends to one personality dimension. The questions were answered on a scale of 1[does not apply] to 7[applies fully]. We have taken averages of the each three items of the respective personality factor of the big five model and standardized them. 
-
-\subsection*{\textit{\underline{Determination of Hourly Wages }}}
-
-SOEP doesn’t collect data on hourly wages directly. Instead it provides data on monthly income from primary employment and actual weekly working hours including overtime. We calculate the hourly wages by dividing the monthly income with the product of weekly hours and the estimated factor of 4.3\footnote{Number of weeks/Number of months = 52/12 = 4.3} for the number of weeks. The measurement errors, possibly existing in working hours or monthly income can influence the results. 
-
-\subsection*{\textit{\underline{Analytical Sample}}}
-
-To address the research question posted in the study, the analytical sample is limited to individuals between age 20 and 60  who were in full time employment, in order to include only those who most likely have completed their education and were below the retirement age. We excluded the observations which had missing values. For individuals reporting zero wages, a small value of 0.0001 was assigned before it was transformed to a logarithmic scale. For categorizing the occupations, we used the  Goldthorpe \footnote{ Goldthorpe class scheme combining occupation categories in light of level of income, economic security, advancement, work authority and responsibility.  
-} classification scale.  We have, however,  excluded the category for  agricultural workers and self-employed people due to their very small sample size. The total sample size turned out to be 2581\footnote{The sample size in our analysis rather low since we had to restrict our sample to the  individuals who are SOEP respondents in both 2005 and 2006 and, more limiting, were the CAPI surveyed in 2006 for cognitive skills, since only those were the only potential respondents of the ultra-short IQ-tests.Further, for occupational classification we used the data from the generated variable file which led to a further reduction.}
-
-\subsection*{\textit{\underline{Descriptive Statistics}}}
-
-
-Figure 1 shows the frequency distribution of individuals across different occupational categories for male and females separately. The graph depicts that male individuals are more concentrated in the Manual worker category whereas the routine employee category is dominated by the females. The total number of male individuals is 1296 and for females is 1285. \par
-Figure 2 shows the distribution and the average of schooling years for different occupations. The graph for higher managerial workers is not normally distributed but rather right-skewed. in the second figure, we can see that the mean schooling years is reducing as we go down the occupational hierarchy. 
-Figure 3 shows the distribution  of all the skill variables, summarizing both cognitive and personality measures. The graph shows that some of the personality traits are not normally distributed, especially in the case of Conscientiousness which is left-skewed
 
 If you are using this template, please cite this item from the references: \citet{GaudeckerEconProjectTemplates}
 
@@ -143,34 +107,20 @@ If you are using this template, please cite this item from the references: \cite
 The decision rule of an agent is the following:
 \input{formulas/decision_rule}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=15cm, height=9cm, inner]{../../bld/out/figures/occupation_count.png}
-\caption{Frequency Distribution of Occupation by Gender}
-\label{fig:figure1}
-\end{figure}
-\begin{flushleft}
+\begin{figure}
+    \caption{Segregation by cycle in the baseline \citet{Schelling69} model as in the \citet{StachurskiSargent13} example}
+    
+    \includegraphics[width=\textwidth]{../../out/figures/occupation_count}
 
-\footnotesize1 : Higher Level Managerial workers \hspace{4mm }2: Lower level Managerial Workers\\
-\footnotesize3: Routine Workers \hspace{26mm} 4: Manual Workers\\
-\end{flushleft}
-\newpage
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=15cm, height=9cm, inner]{../../bld/out/figures/heatmap.png}
-\caption
-\label{Figure 2}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=15cm, height=9cm, inner]{../../bld/out/figures/distplot.png}
-\caption{Distribution of Personality traits and Cognitive abilities}
-\label{fig:figure1}
 \end{figure}
 
 
+\begin{figure}
+    \caption{Segregation by cycle in the baseline \citet{Schelling69} model, limiting the number of potential moves per period to two}
+    
+    \includegraphics[width=\textwidth]{../../out/figures/schelling_max_moves_2}
+
+\end{figure}
 
 % section introduction (end)
 
