@@ -171,7 +171,38 @@ To address the research question posted in the study, the analytical sample is l
 \end{figure}
 
 
+\section*{Methodology}
 
+First we investigate the returns to earnings by  using the basic Mincer\footnote{It was Jacob Mincer who in his book ‘Schooling,experience and earnings, 1975’ modelled log earnings as  the sum of linear years of schooling and a quadratic function of years of potential experience, experience being afe minus schooling minus six. The equation has been used by various researchers for estimation on a ton of data sets for a many countries and time periods which undeniably makes it one of the most widely used approach in empirical economics.} specification:
+   \[lnY_{i} = \beta_{0} + \beta_{1}S_{i} + \beta_{2}E_{i} + \beta_{3}E^{2}+\epsilon_{i} \label{eq:basic} \tag{1} \]                        
+
+Where lnY is the natural logarithm of hourly wages of individual i, S represents years of schooling and E is potential years of experience and E\textsuperscript{2} is squared experience.\par
+There exists a linear relationship between schooling and wages.The variable experience is generated using the approach used in Johnson, Chow(1997)\footnote{Johnson,Chow in Rates of Returns to Schooling in China (1997) assume that the average person began his schooling at age  6  years  and  that  time  not  spent  in  formal  schooling  was  spent  gaining  on-the-job experience
+}:
+                     \[ Experience = Age- Schooling -6\]
+                     
+ A simplifying assumption of our model is that the cognitive skills are not correlated with education since the correlation can bias our results. The assumption is fair based on the evidence in Griliches \& Mason (1972)\footnote{Griliches and Mason, 1972 in Education,Income and Ability ( 972) investigated the contribution of education to economic growth and suggested that the mental ability is indeed correlated to the quantity of schooling since an individual obtains most of his mental ability in formal years of education which further contributes to his income.}
+ We will then expand the basic specification by adding the cognitive skills to (1):
+ \[lnY_{i} = \beta_{0} + \beta_{1}S_{i} + \beta_{2}E_{i} + \beta_{3}E_{i}^{2} + \gamma c'_{i} +\epsilon_{i} \label{eq:cog} \tag{2} \]  
+ 
+ Here c' is the vector of individual i’s cognitive skills which includes the standardized test scores of Fluency and Symbol Recognition Test.
+ We then introduce only non cognitive skills in the basic specification:
+ 
+  \[lnY_{i} = \beta_{0} + \beta_{1}S_{i} + \beta_{2}E_{i} + \beta_{3}E_{i}^{2} + \alpha n'_{i} \label{eq:noncog}+\epsilon_{i} \tag{3} \]  
+  
+  n' is the vector of non cognitive skills which includes the standardized  five personality traits of the Five factor model. 
+  
+  We then add both skills to the specification (1): 
+  \[lnY_{i} = \beta_{0} + \beta_{1}S_{i} + \beta_{2}E_{i} + \beta_{3}E_{i}^{2} + \gamma c'_{i} + \alpha n'_{i} +\epsilon_{i}  \label{eq:cog} \tag{4} \]
+  
+  We will then run regressions for the above mentioned specifications with respect to different occupations:
+    
+ \[lnY_{i,j} = \beta_{0} + \beta_{1}S_{i,j} + \beta_{2}E_{i,j} + \beta_{3}E_{i,j}^{2} + \gamma c'_{i,j} + \alpha n'_{i,j} +\epsilon_{i,j}  \label{eq:cog} \tag{5} \]
+ 
+ Where lnY is now the log hourly wages of individual i with occupation j. 
+ 
+ \section*{Results}
+ This section presents estimates of the impact of cognitive and non-cognitive skills on the labor market outcomes. The first subsection presents estimates pf the relationship between skills and wages for  all the four describe specifications. The second subsection examines the impacts of those skills on wages across the occupation categories. 
 % section introduction (end)
 
 
