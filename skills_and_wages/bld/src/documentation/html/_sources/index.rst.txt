@@ -8,7 +8,7 @@ Welcome to the Skills and Wages project's documentation!
 ================================================================================================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     introduction
     original_data
