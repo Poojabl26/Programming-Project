@@ -40,25 +40,8 @@
 <span id="id1"></span><h1>Model code<a class="headerlink" href="#model-code" title="Permalink to this headline">¶</a></h1>
 <p>The directory <em>src.model_code</em> contains source files that might differ by model and that are potentially used at various steps of the analysis.</p>
 <p>For example, you may have a class that is used both in the <a class="reference internal" href="analysis.html#analysis"><span class="std std-ref">Main model estimations / simulations</span></a> and the <a class="reference internal" href="final.html#final"><span class="std std-ref">Visualisation and results formatting</span></a> steps. Additionally, maybe you have different utility functions in the baseline version and for your robustness check. You can just inherit from the baseline class and override the utility function then.</p>
-<div class="section" id="module-src.model_code.agent">
-<span id="the-agent-class-of-the-schelling-example"></span><h2>The <code class="docutils literal notranslate"><span class="pre">Agent</span></code> class of the Schelling example<a class="headerlink" href="#module-src.model_code.agent" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="src.model_code.agent.Agent">
-<em class="property">class </em><code class="descname">Agent</code><span class="sig-paren">(</span><em>typ</em>, <em>initial_location</em>, <em>n_neighbours</em>, <em>require_same_type</em>, <em>max_moves</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/model_code/agent.html#Agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.model_code.agent.Agent" title="Permalink to this definition">¶</a></dt>
-<dd><p>An Agent as in the Schelling (1969, <a class="reference internal" href="references.html#schelling69" id="id2">[1]</a>)
-segregation model. Move each period until enough neighbours
-of the same type are found or the maximum number of moves
-is reached.</p>
-<p>Code is based on the example in the Stachurski and Sargent
-Online Course <a class="reference internal" href="references.html#stachurskisargent13" id="id3">[2]</a>.</p>
-<dl class="method">
-<dt id="src.model_code.agent.Agent.move_until_happy">
-<code class="descname">move_until_happy</code><span class="sig-paren">(</span><em>agents</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/src/model_code/agent.html#Agent.move_until_happy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#src.model_code.agent.Agent.move_until_happy" title="Permalink to this definition">¶</a></dt>
-<dd><p>If not happy, then randomly choose new locations until happy.</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="the-agent-class-of-the-schelling-example">
+<h2>The <code class="docutils literal notranslate"><span class="pre">Agent</span></code> class of the Schelling example<a class="headerlink" href="#the-agent-class-of-the-schelling-example" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

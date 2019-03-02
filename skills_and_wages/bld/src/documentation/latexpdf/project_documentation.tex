@@ -138,18 +138,13 @@ The following is taken from the top-level wscript file. Modify any project-wide 
     \PYG{n}{pp} \PYG{o}{=} \PYG{n}{OrderedDict}\PYG{p}{(}\PYG{p}{)}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{PROJECT\PYGZus{}ROOT}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{.}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IN\PYGZus{}DATA}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{src/original\PYGZus{}data/}\PYG{l+s+s2}{\PYGZdq{}}
-    \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IN\PYGZus{}MODEL\PYGZus{}CODE}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{src/model\PYGZus{}code}\PYG{l+s+s2}{\PYGZdq{}}
-    \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IN\PYGZus{}MODEL\PYGZus{}SPECS}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{src/model\PYGZus{}specs}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{LIBRARY}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{src/library}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{BLD}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}DATA}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/out/data}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}ANALYSIS}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/out/analysis}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}FINAL}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/out/final}\PYG{l+s+s2}{\PYGZdq{}}
     \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}FIGURES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/out/figures}\PYG{l+s+s2}{\PYGZdq{}}
-    \PYG{c+c1}{\PYGZsh{} OUT\PYGZus{}MODEL\PYGZus{}SPECS is only required for using Stata with JSON and}
-    \PYG{c+c1}{\PYGZsh{} can be safely deleted otherwise}
-    \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}MODEL\PYGZus{}SPECS}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/src/model\PYGZus{}specs}\PYG{l+s+s2}{\PYGZdq{}}
-    \PYG{n}{pp}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{OUT\PYGZus{}TABLES}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{f}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}out\PYGZcb{}}\PYG{l+s+s2}{/out/tables}\PYG{l+s+s2}{\PYGZdq{}}
+   
 
 
 
@@ -282,29 +277,7 @@ For example, you may have a class that is used both in the {\hyperref[\detokeniz
 
 
 \section{The \sphinxstyleliteralintitle{\sphinxupquote{Agent}} class of the Schelling example}
-\label{\detokenize{model_code:module-src.model_code.agent}}\label{\detokenize{model_code:the-agent-class-of-the-schelling-example}}\index{src.model\_code.agent (module)@\spxentry{src.model\_code.agent}\spxextra{module}}\index{Agent (class in src.model\_code.agent)@\spxentry{Agent}\spxextra{class in src.model\_code.agent}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{model_code:src.model_code.agent.Agent}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{class }}\sphinxbfcode{\sphinxupquote{Agent}}}{\emph{typ}, \emph{initial\_location}, \emph{n\_neighbours}, \emph{require\_same\_type}, \emph{max\_moves}}{}
-An Agent as in the Schelling (1969, \sphinxcite{references:schelling69})
-segregation model. Move each period until enough neighbours
-of the same type are found or the maximum number of moves
-is reached.
-
-Code is based on the example in the Stachurski and Sargent
-Online Course \sphinxcite{references:stachurskisargent13}.
-\index{move\_until\_happy() (Agent method)@\spxentry{move\_until\_happy()}\spxextra{Agent method}}
-
-\begin{fulllineitems}
-\phantomsection\label{\detokenize{model_code:src.model_code.agent.Agent.move_until_happy}}\pysiglinewithargsret{\sphinxbfcode{\sphinxupquote{move\_until\_happy}}}{\emph{agents}}{}
-If not happy, then randomly choose new locations until happy.
-
-\end{fulllineitems}
-
-
-\end{fulllineitems}
-
-
+\label{\detokenize{model_code:the-agent-class-of-the-schelling-example}}
 
 \chapter{Model specifications}
 \label{\detokenize{model_specs:model-specifications}}\label{\detokenize{model_specs:id1}}\label{\detokenize{model_specs::doc}}
@@ -343,9 +316,6 @@ John Stachurski and Thomas J. Sargent. Quantitative economics. Available at htt
 \let\bigletter\sphinxstyleindexlettergroup
 \bigletter{b}
 \item\relax\sphinxstyleindexentry{bld.project\_paths}\sphinxstyleindexpageref{introduction:\detokenize{module-bld.project_paths}}
-\indexspace
-\bigletter{m}
-\item\relax\sphinxstyleindexentry{src.model\_code.agent}\sphinxstyleindexpageref{model_code:\detokenize{module-src.model_code.agent}}
 \end{sphinxtheindex}
 
 \renewcommand{\indexname}{Index}

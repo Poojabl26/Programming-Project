@@ -14,15 +14,11 @@ import re
 project_paths = {}
 project_paths['BLD'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages'
 project_paths['IN_DATA'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/src/original_data'
-project_paths['IN_MODEL_CODE'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/src/model_code'
-project_paths['IN_MODEL_SPECS'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/src/model_specs'
 project_paths['LIBRARY'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/src/library'
 project_paths['OUT_ANALYSIS'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/out/analysis'
 project_paths['OUT_DATA'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/out/data'
 project_paths['OUT_FIGURES'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/out/figures'
 project_paths['OUT_FINAL'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/out/final'
-project_paths['OUT_MODEL_SPECS'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/src/model_specs'
-project_paths['OUT_TABLES'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages/bld/out/tables'
 project_paths['PROJECT_ROOT'] = r'/Users/poojabansal/Desktop/Programming-Project/skills_and_wages'
 
 

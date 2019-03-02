@@ -10,7 +10,6 @@ import matplotlib.image as mpimg
 
 
 
-
 file = pd.read_csv(ppj("OUT_DATA", "data.csv"), sep = "," )
 
 #Descriptive tables
@@ -48,6 +47,7 @@ plt.clf()
 #Importing the image generated using dot file and exporting it to out figures folder
 img=mpimg.imread(ppj("IN_DATA", 'decisiontree.png'))
 imgplot = plt.imshow(img)
+plt.axis('off')
 plt.savefig(ppj("OUT_FIGURES", "tree"))
 
 
