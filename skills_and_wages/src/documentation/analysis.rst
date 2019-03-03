@@ -47,3 +47,9 @@ Advantages of Decision Trees:
 * There are fast, reliable algorithms to learn these trees
 
 
+The basic regression-tree-growing algorithm then is as follows:
+1. Start with a single node containing all points. Calculate the prediction for leaf  and Total Sum of Squares.
+2. If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold δ, or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
+3. In each new node, go back to step 1.
+
+
