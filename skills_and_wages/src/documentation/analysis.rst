@@ -40,16 +40,21 @@ Prediction trees use the tree to represent the recursive partition. Each of the 
 For classic regression trees, the model in each cell is just a constant estimate of
 Y.
 Advantages of Decision Trees: 
+
 * Making predictions is fast (no complicated calculations, just looking up constants in the tree)
+
 * It’s easy to understand what variables are important in making the pre- diction (look at the tree)
+
 * If some data is missing, we might not be able to go all the way down the tree to a leaf, but we can still make a prediction by averaging all the leaves in the sub-tree we do reach
+
 * The model gives a jagged response, so it can work when the true regression surface is not smooth. If it is smooth, though, the piecewise-constant surface can approximate it arbitrarily closely (with enough leaves)
+
 * There are fast, reliable algorithms to learn these trees
 
 
 The basic regression-tree-growing algorithm then is as follows:
-1. Start with a single node containing all points. Calculate the prediction for leaf  and Total Sum of Squares.
-2. If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold δ, or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
-3. In each new node, go back to step 1.
+#. Start with a single node containing all points.Calculate the prediction for leaf  and Total Sum of Squares.
+#. If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold δ, or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
+#. In each new node, go back to step 1.
 
 
