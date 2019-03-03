@@ -54,7 +54,38 @@ Advantages of Decision Trees:
 
 The basic regression-tree-growing algorithm then is as follows:
 #. Start with a single node containing all points.Calculate the prediction for leaf  and Total Sum of Squares.
+
 #. If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold δ, or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
+
 #. In each new node, go back to step 1.
+
+We use the Top-Down Induction of Decision Trees.
+Main: 
+#. **let** T := Node := a decision tree consisting of an empty root node
+#. **return** TDIT (E,Atts,T,Node)      E: set of examples, Atts: set of attributes
+
+Discussing functions: 
+
+TDIDT gain: 
+
+
+*. Entropy: 
+		
+A decision tree is built top-down from a root node and involves partitioning the data into subsets that contain instances with similar values (homogenous). TDIDT algorithm uses entropy to calculate the homogeneity of a sample. If the sample is completely homogeneous the entropy is zero and if the sample is an equally divided it has entropy of one.The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy. WE choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.
+
+*. Get Information Gain: 
+The information gain is based on the decrease in entropy after a dataset is split on an attribute. Constructing a decision tree is all about finding attribute that returns the highest information gain (i.e., the most homogeneous branches).We calculate the entropy using the defined entropy function. The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy.
+
+
+Number of positives: 
+
+
+
+Create tree TDIDT: TDIDT(E,Atts,T, Node)
+
+
+Classify
+Test Data Output
+
 
 
