@@ -81,11 +81,16 @@ Number of positives:
 
 
 
-Create tree TDIDT: TDIDT(E,Atts,T, Node)
+Create tree TDIDT: TDIDT(E, Atts, T, Node)
 
 
-Classify
-Test Data Output
+Classify : : Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.A branch with entropy of 0 is a leaf node. A branch with entropy more than the threshold needs further splitting. 
+
+Test Data Output: Predicting the values using results generated from the decision tree and calculating the accuracy/percentage of match the validate our results. 
+
+Export tree node
+
+Update to Dot File
 
 
 
