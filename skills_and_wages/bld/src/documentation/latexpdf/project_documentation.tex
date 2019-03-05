@@ -52,7 +52,7 @@
 
 
 \title{Documentation of the Skills and Wages project}
-\date{03 March 2019}
+\date{05 March 2019}
 \release{}
 \author{Pooja Bansal}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -281,16 +281,65 @@ Prediction trees use the tree to represent the recursive partition. Each of the 
 For classic regression trees, the model in each cell is just a constant estimate of
 Y.
 Advantages of Decision Trees:
-* Making predictions is fast (no complicated calculations, just looking up constants in the tree)
-* It’s easy to understand what variables are important in making the pre- diction (look at the tree)
-* If some data is missing, we might not be able to go all the way down the tree to a leaf, but we can still make a prediction by averaging all the leaves in the sub-tree we do reach
-* The model gives a jagged response, so it can work when the true regression surface is not smooth. If it is smooth, though, the piecewise-constant surface can approximate it arbitrarily closely (with enough leaves)
-* There are fast, reliable algorithms to learn these trees
+\begin{itemize}
+\item {} 
+Making predictions is fast (no complicated calculations, just looking up constants in the tree)
+
+\item {} 
+It’s easy to understand what variables are important in making the pre- diction (look at the tree)
+
+\item {} 
+If some data is missing, we might not be able to go all the way down the tree to a leaf, but we can still make a prediction by averaging all the leaves in the sub-tree we do reach
+
+\item {} 
+The model gives a jagged response, so it can work when the true regression surface is not smooth. If it is smooth, though, the piecewise-constant surface can approximate it arbitrarily closely (with enough leaves)
+
+\item {} 
+There are fast, reliable algorithms to learn these trees
+
+\end{itemize}
 
 The basic regression-tree-growing algorithm then is as follows:
-1. Start with a single node containing all points. Calculate the prediction for leaf  and Total Sum of Squares.
-2. If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold \(\delta\), or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
-3. In each new node, go back to step 1.
+\#. Start with a single node containing all points.Calculate the prediction for leaf  and Total Sum of Squares.
+\begin{enumerate}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumi{\theenumi .}
+\makeatletter\def\p@enumii{\p@enumi \theenumi .}\makeatother
+\item {} 
+If all the points in the node have the same value for all the independent variables, stop. Otherwise, search over all binary splits of all variables for the one which will reduce S as much as possible. If the largest decrease in S would be less than some threshold \(\delta\), or one of the resulting nodes would contain less than q points, stop. Otherwise, take that split, creating two new nodes.
+
+\item {} 
+In each new node, go back to step 1.
+
+\end{enumerate}
+
+We use the Top-Down Induction of Decision Trees.
+Main:
+\#. \sphinxstylestrong{let} T := Node := a decision tree consisting of an empty root node
+\#. \sphinxstylestrong{return} TDIT (E,Atts,T,Node)      E: set of examples, Atts: set of attributes
+
+Discussing functions:
+
+TDIDT gain:
+
+{\color{red}\bfseries{}*}. Entropy:
+
+A decision tree is built top-down from a root node and involves partitioning the data into subsets that contain instances with similar values (homogenous). TDIDT algorithm uses entropy to calculate the homogeneity of a sample. If the sample is completely homogeneous the entropy is zero and if the sample is an equally divided it has entropy of one.The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy. WE choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.
+
+{\color{red}\bfseries{}*}. Get Information Gain:
+The information gain is based on the decrease in entropy after a dataset is split on an attribute. Constructing a decision tree is all about finding attribute that returns the highest information gain (i.e., the most homogeneous branches).We calculate the entropy using the defined entropy function. The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy.
+
+Number of positives:
+
+Create tree TDIDT: TDIDT(E, Atts, T, Node)
+
+Classify : : Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.A branch with entropy of 0 is a leaf node. A branch with entropy more than the threshold needs further splitting.
+
+Test Data Output: Predicting the values using results generated from the decision tree and calculating the accuracy/percentage of match the validate our results.
+
+Export tree node
+
+Update to Dot File
 
 
 \chapter{Visualisation and results formatting}
