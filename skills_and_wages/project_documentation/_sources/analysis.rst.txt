@@ -29,9 +29,12 @@ We define our independent variables as X and dependent variables as Y, For each 
 After the first 4 regression, we perform regression for different occupational groups by defining a loop for the values in the our column occupation which contains : 1,2,3,4 thus generates results for 4 different outputs for all categories. 
 
 
+
+
 Decision Tree
 =================
 
+This is not a part of my seminar paper. It's an analysis to confirm the validity of my results. 
 
 Linear regression is a global model, where there is a single predictive formula holding over the entire data-space.
 An alternative approach is to sub-divide, or partition, the space into smaller regions, where the interactions are more manageable. We then partition the sub-divisions again this is called recursive partitioning  until finally we get to chunks of the space which are so tame that we can fit simple models to them. The global model thus has two parts: one is just the recursive partition, the other is a simple model for each cell of the partition.
