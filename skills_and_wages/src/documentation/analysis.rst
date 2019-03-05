@@ -80,20 +80,21 @@ A decision tree is built top-down from a root node and involves partitioning the
 The information gain is based on the decrease in entropy after a dataset is split on an attribute. Constructing a decision tree is all about finding attribute that returns the highest information gain (i.e., the most homogeneous branches).We calculate the entropy using the defined entropy function. The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy.
 
 
-Number of positives: 
+Number of positives: Calcalates the number of positives and negative for further splitting
 
 
 
 Create tree TDIDT: TDIDT(E, Atts, T, Node)
 
 
-Classify : : Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.A branch with entropy of 0 is a leaf node. A branch with entropy more than the threshold needs further splitting. 
+Classify : 
+Choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.A branch with entropy of 0 is a leaf node. A branch with entropy more than the threshold needs further splitting. 
 
 Test Data Output: Predicting the values using results generated from the decision tree and calculating the accuracy/percentage of match the validate our results. 
 
-Export tree node
+Export tree node: Exports the generated nodes to the dot files if the index is none.
 
-Update to Dot File
+Update to Dot File: 
 
 
 
