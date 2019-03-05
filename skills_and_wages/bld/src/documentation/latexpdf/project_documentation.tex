@@ -73,7 +73,7 @@
 \label{\detokenize{introduction:introduction}}\label{\detokenize{introduction:id1}}\label{\detokenize{introduction::doc}}
 Documentation on the rationale, Waf, and more background is at \sphinxurl{http://hmgaudecker.github.io/econ-project-templates/}
 
-The Python version of the template uses a modified version of Stachurski’s and Sargent’s code accompanying their Online Course \sphinxcite{references:stachurskisargent13} for Schelling’s (1969, \sphinxcite{references:schelling69}) segregation model as the running exmaple.
+The Python version of the template uses a modified version of Stachurski’s and Sargent’s code accompanying their Online Course {[}StachurskiSargent13{]} for Schelling’s (1969, {[}Schelling69{]}) segregation model as the running exmaple.
 
 
 \section{Getting started}
@@ -380,13 +380,23 @@ No codes are stored in the library for the purpose of this project.
 \chapter{References}
 \label{\detokenize{references:references}}\label{\detokenize{references:id1}}\label{\detokenize{references::doc}}
 
+\begin{enumerate}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumi{\theenumi .}
+\makeatletter\def\p@enumii{\p@enumi \theenumi .}\makeatother
+\item {} 
+A Primer on Scientific Programming with Python, Hans Petter Langtangen, Springer 2009
 
-\begin{sphinxthebibliography}{1}
-\bibitem[1]{references:schelling69}
-Thomas C. Schelling. Models of segregation. \sphinxstyleemphasis{The American Economic Review}, 59(2):488\textendash{}493, 1969.
-\bibitem[2]{references:stachurskisargent13}
-John Stachurski and Thomas J. Sargent. Quantitative economics. Available at http://quant-econ.net/index.html, 2013.
-\end{sphinxthebibliography}
+\item {} 
+An Introduction to Computer Science Using \{Python\}, Jennifer Campbell and Paul Gries and Jason Montojo and Gregory V. Wilson, The Pragmatic Programmers 2009.
+
+\item {} 
+Best Practices for Scientific Computing, Gregory V. Wilson and D. A. Aruliah and C. Titus Brown and Neil P. Chue Hong and Matt Davis and Richard T. Guy and Steven H. D. Haddock and Katy Huff and Ian Mitchell and Mark Plumbley and Ben Waugh and Ethan P. White and Paul Wilson, 2012
+
+\item {} 
+Computational science: …Error, Zeeya Merali, Nature 2010
+
+\end{enumerate}
 
 
 \renewcommand{\indexname}{Python Module Index}

@@ -87,4 +87,3 @@ file.to_csv(ppj("OUT_DATA", "data.csv"))
 # Program ends here
 end_time = datetime.now()
 print('Execution duration: {}'.format(end_time - start_time))
-
