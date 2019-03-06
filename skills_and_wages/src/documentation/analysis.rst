@@ -80,11 +80,11 @@ A decision tree is built top-down from a root node and involves partitioning the
 The information gain is based on the decrease in entropy after a dataset is split on an attribute. Constructing a decision tree is all about finding attribute that returns the highest information gain (i.e., the most homogeneous branches).We calculate the entropy using the defined entropy function. The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy.
 
 
-Number of positives: Calcalates the number of positives and negative for further splitting
+Number of positives: Calculates the number of positives and negative for further splitting
 
 
 
-Create tree TDIDT: TDIDT(E, Atts, T, Node)
+Create tree TDIDT: TDIDT(E, Atts, T, Node): Now, with the information gain is a measure of how well a certain split is based on how well the classification accuracy is after the split. Here, a data set is split based on a condition of the parameter and the data associated with this is assigned to that particular group. The best node, i.e the node with the highest information gain is set as the node condition and the same steps are repeated until further split doesn't give any improvement which is called a leaf node. For this node, the predicted output is set based on majority voting.
 
 
 Classify : 
@@ -94,7 +94,16 @@ Test Data Output: Predicting the values using results generated from the decisio
 
 Export tree node: Exports the generated nodes to the dot files if the index is none.
 
-Update to Dot File: 
+Update to Dot File: Update the file with the generated nodes until the splitting stops. 
+
+
+Decision Tree OUTPUT
+=====================
+
+The result is generate in a dit file which was later converted as an image on the graphviz website. However, the image was reloaded and saved using python but the image quality reduced by a great amount. 
+Kindly refer to the image in original data folder. As we can interpret from the image, Extraversion is the most important predictor chosen by the Decision tree which is possible since our regression results prove that it is highly significant in all the cases. We then see that Agreeableness is not an important factor which is again validated by our regression results. Fluency test scores are relatively less important than the symbol test scores and so did our regression results conveyed. However, Openness is shown to be an important variables by the decision tree. 
+
+
 
 
 
