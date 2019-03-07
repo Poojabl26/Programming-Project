@@ -251,6 +251,86 @@ assigned before it was transformed to a logarithmic scale.
 	\end{itemize}
 \end{frame}
 
+\begin{table}
+	\caption{SOEP questions and personality traits used in the analysis }
+	\begin{tabular}{l c |  c }
+ 		Variable label    & Personality traits \\
+ 		I see myself as someone who ...&\\
+ 		\hline
+ 		is original, comes up with new ideas  &Openness \ \\
+ 		values artistic experiences&Openness \\
+ 		has an active imagination&Openness\\
+ 		
+ 		does a thorough job&   Conscientiousness \\
+ 		does things effectively and efficiently &Conscientiousness \\
+ 		tends to be lazy (reversed) &Conscientiousness   \\
+		
+ 		is communicative, talkative&   Extraversion \\
+	 	is outgoing, sociable& Extraversion \\
+ 		is reserved (reversed)& Extraversion \\
+ 		
+ 		is sometimes somewhat rude to others (reversed)&Agreeableness\\
+ 		has a forgiving nature&Agreeableness \\
+ 		is considerate and kind to others&Agreeableness \\
+ 	
+ 		worries a lot&Neuroticism\\
+ 		gets nervous easily&Neuroticism \\
+ 		is relaxed, handles stress well (reversed)& Neuroticism\\
+ 		
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\caption{Erikson-Goldthorpe Class Categories }
+	\begin{tabular}{| c | c }
+ 	Category&Occupation   \\
+ 	\hline
+	 I &Higher-grade professionals, administrators, and officials\\
+
+ 	II &Lower-grade professionals, administrators, and officials \\
+
+	 IIIa &Routine non-manual employees(administration)\\
+
+ 	IIIb& Routine non-manual employees (sales and services) \\
+ 
+	IVc &Small proprietors with employee \\
+ 
+	 IVb &Small proprietors without employee  \\
+
+	IVc& Farmers and smallholders, workers in primary production\\
+
+	V& Lower-grade technicians,supervisors of manual workers\\
+
+	VI& Skilled manual workers\\
+
+	VIIa&Semi-skilled and unskilled manual workers  \\
+
+	VIIb&Semi-skilled and unskilled manual workers \\
+
+	\end{tabular}
+\end{table}
+
+\begin{figure}
+    \caption{Frequency Distribution of Occupation}
+    
+    \includegraphics[width=\textwidth]{../../out/figures/occupation_count}
+
+\end{figure}
+
+\begin{figure}
+    \caption{Correlation heatmap}
+    
+    \includegraphics[width=\textwidth]{../../out/figures/heatmap}
+
+\end{figure}
+
+\begin{figure}
+    \caption{Density plot for all the variables}
+    
+    \includegraphics[width=\textwidth]{../../out/figures/distplot}
+
+\end{figure}
+
 \begin{frame}[t]
 	\frametitle{Analytical Sample}
 	 \begin{itemize}
@@ -307,6 +387,9 @@ A further issue is the measurement error persistent in the measured
 skill variables which might have strongly affected the results.
 	\end{itemize}
 \end{frame}
+
+
+
 % Print black screen only in presentation mode for finishing up.
 \mode<beamer> {
     \beamersetaveragebackground{black}
