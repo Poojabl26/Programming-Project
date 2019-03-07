@@ -69,7 +69,7 @@ Main:
 
 Discussing functions: 
 
-TDIDT gain: 
+TDIDT gain: Assigned the class TDIDT node to the node and then Defining the class for the node of the decision tree. Each node will have a parent node and each node is either a right node or a left node. 
 
 
 *. Entropy: 

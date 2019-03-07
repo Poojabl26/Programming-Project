@@ -80,7 +80,7 @@ Main:
 #. <strong>let</strong> T := Node := a decision tree consisting of an empty root node
 #. <strong>return</strong> TDIT (E,Atts,T,Node)      E: set of examples, Atts: set of attributes</p>
 <p>Discussing functions:</p>
-<p>TDIDT gain:</p>
+<p>TDIDT gain: Assigned the class TDIDT node to the node and then Defining the class for the node of the decision tree. Each node will have a parent node and each node is either a right node or a left node.</p>
 <p><a href="#id1"><span class="problematic" id="id2">*</span></a>. Entropy:</p>
 <p>A decision tree is built top-down from a root node and involves partitioning the data into subsets that contain instances with similar values (homogenous). TDIDT algorithm uses entropy to calculate the homogeneity of a sample. If the sample is completely homogeneous the entropy is zero and if the sample is an equally divided it has entropy of one.The dataset is then split on the different attributes. The entropy for each branch is calculated. Then it is added proportionally, to get total entropy for the split. The resulting entropy is subtracted from the entropy before the split. The result is the Information Gain, or decrease in entropy. WE choose attribute with the largest information gain as the decision node, divide the dataset by its branches and repeat the same process on every branch.</p>
 <p><a href="#id3"><span class="problematic" id="id4">*</span></a>. Get Information Gain:
